@@ -1,6 +1,6 @@
 ---
 title: "Rock data set"
-author: 'FAITH '
+author: 'Benjamin '
 date: "2024-02-11"
 output:
   html_document: default
@@ -187,4 +187,5 @@ ggplot(data_sc, aes(x = shape, y = peri)) +
 
 ```{r}
 ```
+
 
