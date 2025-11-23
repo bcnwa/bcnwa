@@ -1,0 +1,190 @@
+---
+title: "Rock data set"
+author: 'FAITH '
+date: "2024-02-11"
+output:
+  html_document: default
+  pdf_document: default
+---
+##collection of the data
+```{r }
+data<-rock
+
+```
+#Exploration of the data
+```{r}
+str(data)
+dim(data)
+head(data)
+```
+
+##checking for missingvalues
+```{r}
+table(is.na(data))
+##checking for categorical/discrete values
+unique(data$perm)
+##freq of values
+table(data$perm)
+##converting the permeability in Milli-Darcies into factors
+data$perm<-as.factor(data$perm)
+```
+
+#Descriptive Analysis on Numeric variables
+```{r}
+#measuring on the area of the rock
+quantiles<-quantile(data$area,seq(0,1,0.20))
+#create breaks
+breaks<-quantiles
+#histogram plot
+hist(data$area,breaks = quantiles, main = "Histogram with Quantiles",xlab = "Area of Rock")
+
+```
+```{r}
+#measuring on the perimeter fo rock
+quantiles_peri<-quantile(data$peri,seq(0,1,0.20))
+breaks_peri<-quantiles_peri
+hist(data$peri,breaks = quantiles_peri,main = "Histogram with Quantiles", xlab = "Perimeter of Rock")
+```
+
+
+```{r}
+
+#measuring the spread on the shape of the rock
+quantiles_shp<-quantile(data$shape,seq(0,1,0.20))
+breaks_shp<-quantiles_shp
+hist(data$shape, breaks = breaks_shp, main = "Histogram with Quantiles",xlab = "Shape of Rock")
+
+
+```
+
+##Univariant analysis
+```{r}
+#area of rock
+boxplot(data$area, horizontal = T)
+```
+
+#univariant analysis 
+```{r}
+##perimeter of Rock
+boxplot(data$peri, horizontal = T)
+```
+
+#univariant analysis on shape 
+```{r}
+boxplot(data$shape,horizontal = T,main="boxplot on shape")
+
+```
+
+##univariant analysis on the discrete data
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+ggplot(data,aes(as.factor(perm)))+
+  geom_bar()
+```
+##correlations perm vs area
+```{r}
+#convert to character
+data$perm<-as.character(data$perm)
+#convert to numeric
+data$perm<-as.numeric(data$perm)
+cor_ap<-cor(data$area,data$perm)
+plot(area~perm, data = data, main = "Scatter Plot with Trendline", 
+     xlab = "Perm", ylab = "Area", pch = 16, col = "blue")
+##calculate the slope and intercept
+slope_ap<-cor_ap * (sd(data$area)/sd(data$perm))
+intercept_ap<-mean(data$area)-slope_ap* mean(data$perm)
+abline(a=intercept_ap,b=slope_ap,col="red",lwd=2)
+
+```
+##correlations shape vs perm
+```{r}
+cor_sp<-cor(data$shape,data$perm)
+plot(shape~perm,data = data,main="Scatterplot with Trendline", xlab="perm",ylab = "Shape",pch=16,col="blue")
+##calculate the slope and intercept
+slope_sp<-cor_sp * (sd(data$shape)/sd(data$perm))
+intercept_sp<-mean(data$shape)-slope_sp* mean(data$perm)
+abline(a=intercept_sp,b=slope_sp,col="red",lwd=2)
+```
+
+##correlation peri vs perm
+```{r}
+cor_pp<-cor(data$peri,data$perm)
+plot(peri~perm,data = data,main="Scatterplot with Trendline", xlab="perm",ylab = "Peri",pch=16,col="blue")
+##calculate the slope and intercept
+slope_pp<-cor_pp * (sd(data$peri)/sd(data$perm))
+intercept_pp<-mean(data$peri)-slope_pp* mean(data$perm)
+abline(a=intercept_pp,b=slope_pp,col="red",lwd=2)
+```
+
+##feature scaling
+```{r}
+data_sc<-scale(data[,1:3])
+summary(data_sc[,3])
+View(data_sc)
+```
+
+```{r}
+perm<-data$perm
+data_sc<-cbind(data_sc,data.frame(perm))
+```
+
+
+##linear regression
+```{r}
+lm_model<-lm(perm~., data = data_sc)
+summary(lm_model)
+
+```
+
+```{r}
+#install.packages("psych") #assuming you dont have the package
+library(psych)
+pairs.panels(data_sc[c("area","peri","shape","perm")])
+```
+# Using ggplot for scatter plot
+```{r}
+###install.packages("ggplot2")
+library(ggplot2)
+ggplot(data_sc, aes(x = area, y = peri)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Scatter Plot for Area vs Peri", x = "Area of Rock", y = "Perimeter of Rock")
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(data_sc, aes(x = area, y = shape)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Scatter Plot for Area vs shape", x = "Area of Rock", y = "shape of Rock")
+
+```
+
+
+```{r}
+library(ggplot2)
+ggplot(data_sc, aes(x = shape, y = peri)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Scatter Plot for shape vs Peri", x = "shape of Rock", y = "Perimeter of Rock")
+```
+
+
+```{r}
+```
+
+
+```{r}
+
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
