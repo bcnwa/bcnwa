@@ -1,0 +1,91 @@
+---
+title: 'DAT603 Assignment Report: Analysis of claims and Payments'
+author: "Joy"
+date: "2025-04-29"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=T}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#
+#loading data
+```{r}
+data<-read.csv("Swedish_Auto_Insurance_Data.csv",header = T,stringsAsFactors = F)
+View(data)
+str(data)
+```
+
+
+
+#EDA
+```{r}
+attach(data)
+hist(X,main="histogram of Number of Claims (X)",xlab="Number of claims", col="green",breaks=15)
+
+hist(Y,main="histogram of Total payment (Y)",xlab="Total payment (in thousands of Kronor)", col="purple",breaks=15)
+summary(X)
+summary(Y)
+
+```
+
+```{r}
+##scatter plot
+plot(X,Y, main = "Scatter plot of claims vs Payment", xlab = "Number of claims (X)",ylab = "Total payment (in thousands of Kronor) (Y)",pch=16,col="blue")
+cor(X,Y)
+```
+
+```{r}
+#Boxplots for X and Y
+boxplot(X,main="Boxplot of Number of Claims (X)", col = "green",horizontal = T)
+
+#Boxplots for X and Y
+boxplot(Y,main="Boxplot of Total Payments (Y)", col = "purple",horizontal = T)
+
+```
+
+```{r}
+#correlations Coeff
+pearsons<-cor.test(X,Y, method = "pearson")
+print(pearsons)
+
+
+#spearman Rho corr
+spearman<-cor.test(X,Y,method = "spearman")
+print(spearman)
+
+kendall<-cor.test(X,Y, method = "kendall")
+print(kendall)
+```
+
+##performing Regression
+```{r}
+model<-lm(Y~X,data = data)
+summary(model)
+```
+
+
+```{r}
+#predict for Y
+predictions<-predict(model,newdata = data)
+head(cbind(X,Y,predictions))
+```
+
+
+```{r}
+#validate the regressions
+plot(model$fitted.values,model$residuals,main = "Residuals vs Fitted values", xlab = "Fitted values",ylab = "Residuals")
+#add abline
+abline(h=0,col="orange")
+```
+
+#checking for Normality of residuals as goodness of fit
+```{r}
+qqnorm(model$residuals,main = "Q-Q plot of the Residuals")
+qqline(model$residuals,col="brown")
+```
+
+
