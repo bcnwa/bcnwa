@@ -1,51 +1,64 @@
-#  Yo, I'm Benjamin Nwaohiri (@bcnwa)
+# Yo, I'm Benjamin Nwaohiri (@bcnwa) 🚀
 
-##  About Me
-I’m a **Data Analyst & Aspiring Machine Learning Engineer** pragmatic about turning raw data into actionable insights.  
-My focus areas include **predictive modeling, statistical analytics, and advanced data visualization**,
-**Data Analysis, cleaning, Wrangling, and preparation**.  
-I work with **R, Python, SQL,spss and Excel** to uncover insights and solve statistical problems.
+## 👨‍💻 About Me
+I’m a **Data Analyst & Aspiring Machine Learning Engineer** focused on turning raw data into actionable insights.  
 
----
+My core focus areas include:
+* **Predictive Modeling & Statistical Analytics**
+* **Operations Research & Linear Programming**
+* **Advanced Data Visualization**
+* **Data Wrangling, Cleaning, & Preparation**
+
+I work with **R, Python, SQL, SPSS, and Excel** to solve complex statistical problems and uncover hidden insights.
+
+-----------------------------------------------------------------------------------------------------
 
 ##  Tools & Skills
-| Category        | Tools |
-|-----------------|-------|
-| Programming     | R, Python |
-| Visualization   | ggplot2, matplotlib, seaborn ,Power BI,Tableau etc|
-| ML & AI         | scikit-learn, TensorFlow, caret etc.|
-| Data Handling   | Excel, dplyr, pandas, SQL Server Management Studio, sqlite, Markdown  |
-| Reporting       | RMarkdown, Jupyter Notebooks |
 
----
+| Category | Tools |
+| :--- | :--- |
+| **Programming** | R, Python |
+| **Visualization** | ggplot2, Matplotlib, Seaborn, Power BI, Tableau |
+| **ML & AI** | Scikit-Learn, TensorFlow, Caret |
+| **Data Handling** | Excel, Dplyr, Pandas, SQL Server Management Studio, SQLite, Markdown |
+| **Reporting** | RMarkdown, Jupyter Notebooks |
 
-##  Featured Projects
-### Case Study: CHL Golf 2019
-- **Objective:** Analyze tournament data to identify performance trends.  
-- **Methods:** Regression analysis, visualization with ggplot2.  
-- **Key Insight:** Player consistency explained ~65% of score variance.  
-![Sample Plot](https://raw.githubusercontent.com/bcnwa/bcnwa/main/rock_plot.png)
+-------------------------------------------------------------------------------------------------------
 
----
+##  Featured Project: CHL Golf Resort 2019 Optimization
 
-##  Aesthetic Touch
-- Clean file organization (`/data`, `/scripts`, `/reports`).  
-- Visuals embedded directly in README.  
-- Emojis used sparingly for section headers.  
-- Tables for clarity and readability.  
+An advanced operations research case study evaluating financial feasibility, land constraints, and golfer enjoyment indices for Cunningham Holdings Limited (CHL) using **Excel Solver**.
 
----
+###  Summary of Decision Models Modeled
+| Model | Description | Land Used (Max 42 ha) | Total Cost (Max $20M) | Enjoyment Index | Status |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **1. Management Plan** | Standard Clubhouse (2 ha) | 40.5 ha | $19,100,000 | 32.00 | **Feasible** |
+| **2. Shareholder Request** | Exclusive Clubhouse (4 ha) | 42.5 ha | $17,520,000 | 36.00 | **Infeasible** (Land cap violated) |
+| **3. Option 1 (Optimal)** | Reduced Clubhouse (3 ha) | 42.0 ha | $18,755,334 | 36.00 | **Feasible** |
+| **4. Option 2** | Scaled Financials | 42.5 ha | $18,755,334 | 36.00 | *Constraint Check Required* |
+| **5. Option 3** | Budget Expansion ($21.6M) | 42.5 ha | $21,600,000 | 36.00 | **Feasible** |
+
+* **Key Takeaway:** While the Shareholder's original request violated the strict 42-hectare boundary, **Option 1** successfully captured the maximum golfer enjoyment score (**36.0**) while fully respecting land and budget caps.
+* [View Repository Details](https://github.com/bcnwa/chl-golf-optimization)
+
+------------------------------------------------------------------------------------------------------
+
+##  Design Philosophy
+* **Clean Organization:** Structured repositories with clear directories (`/data`, `/scripts`, `/reports`).
+* **Visual-First:** Key insights and charts embedded directly into documentation.
+* **Minimalist Aesthetics:** Intentional use of emojis and markdown tables for maximum readability.
+
+------------------------------------------------------------------------------------------------------
 
 ## 🌐 Connect With Me
-- [GitHub](https://github.com/bcnwa)  
-- [LinkedIn](https://www.linkedin.com/in/benjamin-nwaohiri)  
-- 📧 Email: benjaminnchimezie93@gmail.com
 
+* 🐙 **GitHub:** [bcnwa](https://github.com/bcnwa)  
+* 💼 **LinkedIn:** [benjamin-nwaohiri](https://www.linkedin.com/in/benjamin-nwaohiri)  
+* 📧 **Email:** [benjaminnchimezie93@gmail.com](mailto:benjaminnchimezie93@gmail.com)  
+* 💬 **WhatsApp:** +2349011529696  
 
 ---
- *Feel free to explore my repositories and projects!*
-
--  How to reach me via whatsapp +2349011529696 and email benjaminnchimezie93@gmail.com
+> *Feel free to explore my repositories and projects!*
 
 <!---
 bcnwa/bcnwa is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
