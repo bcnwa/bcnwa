@@ -4,7 +4,7 @@
 I’m a **Data Analyst & Aspiring Machine Learning Engineer** passionate about turning raw data into actionable insights.  
 My focus areas include **predictive modeling, statistical learning, and advanced data visualization**,
 **Data Analysis, Visualization, Wrangling, and Cleaning**.  
-I work with **R, Python, and Excel** to uncover insights and solve statistical problems.
+I work with **R, Python, SQL and Excel** to uncover insights and solve statistical problems.
 
 ---
 
