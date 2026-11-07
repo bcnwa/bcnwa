@@ -39,12 +39,13 @@ I work with **R, Python, SQL,spss and Excel** to uncover insights and solve stat
 ## 🌐 Connect With Me
 - [GitHub](https://github.com/bcnwa)  
 - [LinkedIn](https://www.linkedin.com/in/benjamin-nwaohiri)  
-- 📧 Email: benjamin@example.com  
+- 📧 Email: benjaminnchimezie93@gmail.com
+
 
 ---
-⭐️ *Feel free to explore my repositories and projects!*
+ *Feel free to explore my repositories and projects!*
 
-- 📫 How to reach me via whatsapp +2349011529696 and email benjaminnchimezie93@gmail.com
+-  How to reach me via whatsapp +2349011529696 and email benjaminnchimezie93@gmail.com
 
 <!---
 bcnwa/bcnwa is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
