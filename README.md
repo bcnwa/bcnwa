@@ -1,6 +1,6 @@
-# 👋 Hi, I'm Benjamin Nwaohiri (@bcnwa)
+#  Yo, I'm Benjamin Nwaohiri (@bcnwa)
 
-## 📊 About Me
+##  About Me
 I’m a **Data Analyst & Aspiring Machine Learning Engineer** passionate about turning raw data into actionable insights.  
 My focus areas include **predictive modeling, statistical learning, and advanced data visualization**,
 **Data Analysis, Visualization, Wrangling, and Cleaning**.  
@@ -8,7 +8,7 @@ I work with **R, Python, and Excel** to uncover insights and solve statistical p
 
 ---
 
-## 🛠️ Tools & Skills
+##  Tools & Skills
 | Category        | Tools |
 |-----------------|-------|
 | Programming     | R, Python |
@@ -19,7 +19,7 @@ I work with **R, Python, and Excel** to uncover insights and solve statistical p
 
 ---
 
-## 📈 Featured Projects
+##  Featured Projects
 ### Case Study: CHL Golf 2019
 - **Objective:** Analyze tournament data to identify performance trends.  
 - **Methods:** Regression analysis, visualization with ggplot2.  
@@ -28,7 +28,7 @@ I work with **R, Python, and Excel** to uncover insights and solve statistical p
 
 ---
 
-## 🎨 Aesthetic Touch
+##  Aesthetic Touch
 - Clean file organization (`/data`, `/scripts`, `/reports`).  
 - Visuals embedded directly in README.  
 - Emojis used sparingly for section headers.  
